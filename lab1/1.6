@@ -1,0 +1,10 @@
+class Solution {
+    func moveZeroes(_ nums: inout [Int]) {
+        var result = nums.filter{ $0 != 0 }
+        
+        for i in 0..<nums.count-result.count{
+            result.append(0)
+        }
+        nums = result
+    }
+}
